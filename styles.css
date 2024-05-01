@@ -3,24 +3,35 @@ body {
 }
 
 body * {
+  font-family: 'Inter';
   box-sizing: border-box;
 }
 
 .wrapper {
   margin: auto;
   max-width: 75rem;
-  padding: 0 4rem 0 8rem;
+  padding: 0 4rem;
 }
 
-button, .header, h1 {
-  font-weight: bold;
+.header, h1 {
+  font-weight: 700
+}
+
+.header .name {
+  font-size: .875rem;
+  letter-spacing: .0625rem;
 }
 
 button {
   border: none;
   background-color: transparent;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: .875rem
+}
+
+button span {
+  font-weight: 500;
+  letter-spacing: .0625rem;
 }
 
 button .button-icon {
@@ -28,6 +39,7 @@ button .button-icon {
 }
 
 h1 {
+  letter-spacing: .125rem;
   font-size: 3rem;
 }
 
@@ -36,7 +48,7 @@ h1 {
   display: flex;
   font-size: 16px;
   justify-content: space-between;
-  padding: 0.5rem 0 1rem;
+  padding: 1rem 0;
   position: relative;
 }
 
@@ -66,6 +78,10 @@ h1 {
   font-size: 1.25rem;
   line-height: 1.75rem;
   padding-right: 2rem;
+}
+
+.summary p {
+  letter-spacing: .0625rem;
 }
 
 .technologies-preview {
