@@ -1,16 +1,38 @@
+:root,
+  :root.light {
+    --bg-color: #e6dcd4;
+    --text-color: #123;
+  }
+
+  :root.dark {
+    --bg-color: #101010;
+    --text-color: #ffffff;
+  }
+
 body {
+  background-color: var(--bg-color);
   margin: 0;
 }
 
 body * {
-  font-family: 'Inter';
   box-sizing: border-box;
+  color: var(--text-color);
+  font-family: 'Inter';
 }
 
 .wrapper {
   margin: auto;
   max-width: 75rem;
   padding: 0 4rem;
+}
+
+.wrapper::before {
+  border-bottom: .0625rem solid var(--text-color);
+  content: '';
+  left: 0;
+  position: absolute;
+  top: 3.1875rem;
+  width: 100%;
 }
 
 .header, h1 {
@@ -50,15 +72,7 @@ h1 {
   justify-content: space-between;
   padding: 1rem 0;
   position: relative;
-}
-
-.header::before {
-  border-bottom: .0625rem solid black;
-  bottom: 0;
-  content: '';
-  left: -5%;
-  position: absolute;
-  width: 110%;
+  height: 3.25rem;
 }
 
 .links-navigation {
