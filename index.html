@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-  <script src="index.js"></script>
+  <script src="index.js" defer></script>
   <div class="wrapper">
     <header class="header">
       <div>
@@ -46,6 +46,7 @@
     </header>
     <main>
       <article class="brief-introduction">
+        <div class="background-image"></div>
         <section class="summary">
           <h1>Krzysztof Torończak,</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias perferendis consequuntur laudantium dignissimos expedita vitae quibusdam ex autem eius incidunt impedit, voluptatibus odit quis quidem ea quae aspernatur labore eos aperiam assumenda nisi, asperiores et! Corrupti tenetur quia perspiciatis a.</p>
@@ -59,10 +60,22 @@
           </nav>
         </section>
         <section class="technologies-preview">
-          TODO
+          <div class="technologies-carousel">
+            <div id="carousel-content" class="carousel-content">
+              <img src="/assets/js.png" alt="">
+              <img src="/assets/ts.png" alt="">
+              <img src="/assets/css.png" alt="">
+              <img src="/assets/html.png" alt="">
+            </div>
+            <button onclick="swipeLeft()" class="carousel-button swipe-left-button">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button onclick="swipeRight()" class="carousel-button swipe-right-button">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
         </section>
       </article>
-      Budowa wizytówki w toku...
     </main>
   </div>
 </body>
