@@ -155,7 +155,12 @@ h1 {
 }
 
 .carousel-content img {
-  padding: 2rem 4rem;
+  padding: 5rem 7rem;
   width: 20rem;
+  transition: all 0.3s ease-out;
 }
 
+.carousel-content img.current-carousel-item{
+  transition: all 0.3s ease-out;
+  padding: 2rem 4rem;
+}
