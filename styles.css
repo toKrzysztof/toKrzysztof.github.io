@@ -1,9 +1,9 @@
 :root,
   :root.light {
-    --bg-color: #e6dcd4;
+    --bg-color: #ddc6b4;
     --text-color: #123;
     --font-thin: 300;
-    --menu-hightlight: #cab2a0;
+    --menu-hightlight: #cba78b;
   }
 
   :root.dark {
