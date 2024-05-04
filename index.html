@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Krzysztof Torończak</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
   <link rel="stylesheet" href="styles.css"><body>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
   <body>
@@ -23,33 +24,39 @@
       <nav class="links-navigation">
         <button>
           <i class="button-icon fas fa-bookmark"></i>
-          <span>Skills</span>
+          <span data-i18n-key="skills">Skills</span>
         </button>
         <button>
           <i class="button-icon fas fa-th"></i>
-          <span>Projects</span>
+          <span data-i18n-key="projects">Projects</span>
         </button>
         <button>
           <i class="button-icon fas fa-briefcase"></i>
-          <span>Experience</span>
+          <span data-i18n-key="experience">Experience</span>
         </button>
         <button>
           <i class="button-icon fas fa-university"></i>
-          <span>Education</span>
+          <span data-i18n-key="education">Education</span>
         </button>
         <button>
           <i class="button-icon fas fa-file-alt"></i>
-          <span>Resume</span>
+          <span data-i18n-key="resume">Resume</span>
         </button>
       </nav>
-      <button onclick="switchTheme()"><i id="theme-icon" class="theme-icon far fa-sun"></i></button>
+      <div class="buttons-box-horizontal">
+        <div id="locale-menu" class="buttons-menu">
+          <button id="pl" onclick="setTranslations('pl')">PL</button>
+          <button id="en" onclick="setTranslations('en')">EN</button>
+        </div>
+        <button onclick="switchTheme()"><i id="theme-icon" class="theme-icon far fa-moon"></i></button>
+      </div>
     </header>
     <main>
       <article class="brief-introduction">
         <div class="background-image"></div>
         <section class="summary">
           <h1>Krzysztof Torończak,</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias perferendis consequuntur laudantium dignissimos expedita vitae quibusdam ex autem eius incidunt impedit, voluptatibus odit quis quidem ea quae aspernatur labore eos aperiam assumenda nisi, asperiores et! Corrupti tenetur quia perspiciatis a.</p>
+          <p data-i18n-key="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias perferendis consequuntur laudantium dignissimos expedita vitae quibusdam ex autem eius incidunt impedit, voluptatibus odit quis quidem ea quae aspernatur labore eos aperiam assumenda nisi, asperiores et! Corrupti tenetur quia perspiciatis a.</p>
           <nav class="profile-links">
             <a href="https://github.com/toKrzysztof">
               <i class="nav-icon fab fa-github"></i>
