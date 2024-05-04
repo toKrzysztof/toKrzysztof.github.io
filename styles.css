@@ -3,12 +3,14 @@
     --bg-color: #e6dcd4;
     --text-color: #123;
     --font-thin: 300;
+    --menu-hightlight: #cab2a0;
   }
 
   :root.dark {
     --bg-color: #101010;
     --text-color: #ffffff;
     --font-thin: 200;
+    --menu-hightlight: rgb(86, 86, 86);
   }
 
 body {
@@ -93,7 +95,7 @@ h1 {
 }
 
 .buttons-menu:hover :first-child {
-  background-color: rgb(86, 86, 86);
+  background-color: var(--menu-hightlight);
 }
 
 .buttons-menu button {
