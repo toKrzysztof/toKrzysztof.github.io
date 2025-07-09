@@ -1,122 +1,239 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Krzysztof Torończak</title>
-  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-  <link rel="stylesheet" href="styles.css"><body>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
-  <body>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-  <script src="index.js" defer></script>
-  <div class="wrapper">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Artistic Background Symbols -->
+    <div class="artistic-background">
+        <div class="symbol code large">{}</div>
+        <div class="symbol music medium">♪</div>
+        <div class="symbol code small">{}</div>
+        <div class="symbol music extra-large">♫</div>
+        <div class="symbol code medium">{}</div>
+        <div class="symbol music small">♪</div>
+        <div class="symbol code extra-large">{}</div>
+        <div class="symbol music large">♫</div>
+        <div class="symbol code small">{}</div>
+        <div class="symbol music medium">♪</div>
+        <div class="symbol code large">{}</div>
+        <div class="symbol music small">♫</div>
+        <div class="symbol code medium">{}</div>
+        <div class="symbol music extra-large">♪</div>
+        <div class="symbol code small">{}</div>
+        <div class="symbol music large">♫</div>
+        <div class="symbol code extra-large">{}</div>
+        <div class="symbol music medium">♪</div>
+        <div class="symbol code large">{}</div>
+        <div class="symbol music small">♫</div>
+    </div>
+
+    <!-- Header with controls -->
     <header class="header">
-      <div>
-        <span>
-          <i class="fas fa-chevron-left"></i>
-          <i class="fas fa-chevron-right"></i>
-        </span>
-        <span class="name">Krzysztof Torończak</span>
-      </div>
-      <nav class="links-navigation">
-        <button>
-          <i class="button-icon fas fa-bookmark"></i>
-          <span data-i18n-key="skills">Skills</span>
-        </button>
-        <button>
-          <i class="button-icon fas fa-th"></i>
-          <span data-i18n-key="projects">Projects</span>
-        </button>
-        <button>
-          <i class="button-icon fas fa-briefcase"></i>
-          <span data-i18n-key="experience">Experience</span>
-        </button>
-        <button>
-          <i class="button-icon fas fa-university"></i>
-          <span data-i18n-key="education">Education</span>
-        </button>
-        <button>
-          <i class="button-icon fas fa-file-alt"></i>
-          <span data-i18n-key="resume">Resume</span>
-        </button>
-      </nav>
-      <div class="buttons-box-horizontal">
-        <div id="locale-menu" class="buttons-menu">
-          <button id="pl" onclick="setTranslations('pl')">PL</button>
-          <button id="en" onclick="setTranslations('en')">EN</button>
+        <div class="header-controls">
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="pl">PL</button>
+            </div>
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <span class="theme-icon">🌙</span>
+            </button>
         </div>
-        <button onclick="switchTheme()"><i id="theme-icon" class="theme-icon far fa-moon"></i></button>
-      </div>
     </header>
-    <main>
-      <article class="brief-introduction">
-        <div class="background-image"></div>
-        <section class="summary">
-          <h1>Krzysztof Torończak,</h1>
-          <p data-i18n-key="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias perferendis consequuntur laudantium dignissimos expedita vitae quibusdam ex autem eius incidunt impedit, voluptatibus odit quis quidem ea quae aspernatur labore eos aperiam assumenda nisi, asperiores et! Corrupti tenetur quia perspiciatis a.</p>
-          <nav class="profile-links">
-            <a href="https://github.com/toKrzysztof">
-              <i class="nav-icon fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/krzysztof-toro%C5%84czak-991322298/">
-              <i class="nav-icon fab fa-linkedin"></i>
-            </a>
-          </nav>
-        </section>
-        <section id="technologies-preview" class="technologies-preview grid">
-          <button onclick="switchTechnologiesDisplayType()" class="technologies-display-type-switch">
-            <i id="technologies-display-icon" class="fas fa-list"></i>
-          </button>
-          <div class="technologies-carousel">
-            <ul id="carousel-content" class="carousel-content">
-              <li class="carousel-item current-carousel-item">
-                <img src="/assets/js.png" alt="Javascript">
-                <label for="Javascript">Javascript</label>
-              </li>
-              <li class="carousel-item">
-                <img src="/assets/ts.png" alt="Typescript">
-                <label for="Javascript">Typescript</label>
-              </li>
-              <li class="carousel-item">
-                <img src="/assets/css.png" alt="CSS">
-                <label for="Javascript">CSS</label>
-              </li>
-              <li class="carousel-item">
-                <img src="/assets/html.png" alt="HTML">
-                <label for="Javascript">HTML</label>
-              </li>
-            </ul>
-            <button onclick="swipeLeft()" class="carousel-button swipe-left-button">
-              <i class="fas fa-chevron-left"></i>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <div class="profile-section">
+                <div class="profile-images">
+                    <div class="profile-image main-image">
+                        <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Your Profile" />
+                    </div>
+                    <div class="profile-image secondary-image">
+                        <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Your Profile 2" />
+                    </div>
+                    <div class="profile-image third-image">
+                        <img src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Your Profile 3" />
+                    </div>
+                    <div class="profile-image fourth-image">
+                        <img src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Your Profile 4" />
+                    </div>
+                    
+                    <!-- Navigation arrows -->
+                    <div class="image-navigation">
+                        <button class="nav-arrow left" aria-label="Previous image">‹</button>
+                        <button class="nav-arrow right" aria-label="Next image">›</button>
+                    </div>
+                    
+                    <!-- Image indicators -->
+                    <div class="image-switch-indicator">
+                        <div class="switch-dot active" data-index="0"></div>
+                        <div class="switch-dot" data-index="1"></div>
+                        <div class="switch-dot" data-index="2"></div>
+                        <div class="switch-dot" data-index="3"></div>
+                    </div>
+                </div>
+                <div class="profile-info">
+                    <h1 class="name">Your Name</h1>
+                    <p class="title">Full Stack Developer & Designer</p>
+                    <p class="summary">
+                        Passionate developer with 5+ years of experience creating innovative digital solutions. 
+                        I specialize in modern web technologies and love turning complex problems into simple, 
+                        beautiful designs. Always eager to learn new technologies and collaborate on exciting projects.
+                    </p>
+                    <div class="contact-links">
+                        <a href="mailto:your.email@example.com" class="contact-btn">Get In Touch</a>
+                        <a href="#timeline" class="scroll-btn">View My Journey</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="timeline-section">
+        <!-- Floating Navigation -->
+        <div class="timeline-nav">
+            <button class="nav-btn" id="prevBtn" aria-label="Previous timeline item">
+                ↑
             </button>
-            <button onclick="swipeRight()" class="carousel-button swipe-right-button">
-              <i class="fas fa-chevron-right"></i>
+            <button class="nav-btn" id="nextBtn" aria-label="Next timeline item">
+                ↓
             </button>
-          </div>
-          <ul id="technologies-grid" class="technologies-grid">
-            <li class="grid-item">
-              <img src="/assets/js.png" alt="Javascript">
-              <label for="Javascript">Javascript</label>
-            </li>
-            <li class="grid-item">
-              <img src="/assets/ts.png" alt="Typescript">
-              <label for="Javascript">Typescript</label>
-            </li>
-            <li class="grid-item">
-              <img src="/assets/css.png" alt="CSS">
-              <label for="Javascript">CSS</label>
-            </li>
-            <li class="grid-item">
-              <img src="/assets/html.png" alt="HTML">
-              <label for="Javascript">HTML</label>
-            </li>
-          </ul>
-        </section>
-      </article>
-    </main>
-  </div>
+        </div>
+        
+        <!-- Progress Indicator -->
+        <div class="timeline-progress">
+            <div class="progress-dot" data-index="0"></div>
+            <div class="progress-dot" data-index="1"></div>
+            <div class="progress-dot" data-index="2"></div>
+            <div class="progress-dot" data-index="3"></div>
+            <div class="progress-dot" data-index="4"></div>
+            <div class="progress-dot" data-index="5"></div>
+            <div class="progress-dot" data-index="6"></div>
+        </div>
+        
+        <div class="container">
+            <h2 class="section-title">My Journey</h2>
+            <div class="timeline">
+                <div class="timeline-line"></div>
+                
+                <!-- Timeline Item 1 - Left -->
+                <div class="timeline-item left" data-index="1">
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=600" alt="University Graduation" />
+                        </div>
+                        <div class="timeline-info">
+                            <span class="timeline-date">2019</span>
+                            <h3 class="timeline-title">Computer Science Degree</h3>
+                            <p class="timeline-description">
+                                Graduated with honors from University with a Bachelor's in Computer Science. 
+                                Specialized in software engineering and web development, building a strong 
+                                foundation in algorithms, data structures, and modern programming paradigms.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <!-- Timeline Item 2 - Right -->
+                <div class="timeline-item right" data-index="2">
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=600" alt="First Job" />
+                        </div>
+                        <div class="timeline-info">
+                            <span class="timeline-date">2020</span>
+                            <h3 class="timeline-title">Junior Developer at TechCorp</h3>
+                            <p class="timeline-description">
+                                Started my professional journey as a Junior Developer, working on React applications 
+                                and learning industry best practices. Collaborated with senior developers on multiple 
+                                client projects and gained valuable experience in agile development methodologies.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <!-- Timeline Item 3 - Left -->
+                <div class="timeline-item left" data-index="3">
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Promotion" />
+                        </div>
+                        <div class="timeline-info">
+                            <span class="timeline-date">2022</span>
+                            <h3 class="timeline-title">Full Stack Developer</h3>
+                            <p class="timeline-description">
+                                Promoted to Full Stack Developer role, taking on more complex projects involving 
+                                Node.js, databases, and cloud deployment. Led a team of 3 developers on a major 
+                                e-commerce platform that increased client revenue by 40%.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <!-- Timeline Item 4 - Right -->
+                <div class="timeline-item right" data-index="4">
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Freelancing" />
+                        </div>
+                        <div class="timeline-info">
+                            <span class="timeline-date">2023</span>
+                            <h3 class="timeline-title">Freelance Consultant</h3>
+                            <p class="timeline-description">
+                                Transitioned to freelance consulting, working with startups and established companies 
+                                to build scalable web applications. Specialized in modern frameworks like Next.js, 
+                                Vue.js, and cloud architecture on AWS and Vercel.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <!-- Timeline Item 5 - Left -->
+                <div class="timeline-item left" data-index="5">
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Current Role" />
+                        </div>
+                        <div class="timeline-info">
+                            <span class="timeline-date">2024</span>
+                            <h3 class="timeline-title">Senior Developer & Mentor</h3>
+                            <p class="timeline-description">
+                                Currently working as a Senior Developer while mentoring junior developers and 
+                                contributing to open-source projects. Passionate about sharing knowledge through 
+                                technical writing and speaking at developer conferences.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="translations.js" type="module"></script>
+    <script src="theme.js" type="module"></script>
+    <script src="script.js" type="module"></script>
+    <script src="audio-player.js" type="module"></script>
 </body>
 </html>
